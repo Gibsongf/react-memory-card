@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+planning:
+a theme for the card displayed = family guy
+Griffin = Peter, Lois, Stewie, Brian, Megatron, Chris
+Glenn Quagmire
+Billy Finn 
+Cleveland Brown
+Joe Swanson
+Seamus Levine
+Adam West
+FUNCTION MAIN APP 
+    bestScore setBestScore = useState (0)
+    currentScore setCurrentScore = useState (0)
+    isBestScore =>
+        if(currentScore > bestScore )
+            setBestScore(currentScore)
+        
+    increaseCurrentScore =>
+        setCurrentScore(currentScore + 1)
+    resetCurrentScore =>
+        setCurrentScore(0)  
+    return
+        div 
+        BoardStuff current=currentScore best=bestScore
+        AllCard increase=increaseCurrentScore reset=resetCurrentScore
+        div/>
+        
+FUNCTION BoardStuff
+    return JSX Board prop.current prop.best (score points)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+FUNCTION AllCards that is the composition of the below functions?
+    obj={card1:false ...(12x)}
+    wasClick setWasClick = useState(obj)
+    checkCardClick => (e)
+        setWasClick ({... obj,e.target.id:true  })
+    resetCard =>
+            prop.reset()
+            setWasClick(obj)
 
-In the project directory, you can run:
+    map part => we can try this in an array and
+                the render will be a random function that receive
+                the length of obj after map and return random number 
+                with the length as base and the select will
+                be delete of the array or pass to another array
+             
+    return img.map(
+        img => {
+        return 
+            Card
+            key=uniquid 
+            clickHandler=checkCardClick
+            src=img.src 
+            title=img.title
+            increasePoint=prop.increase 
+            reset=prop.reset
+        })
 
-### `npm start`
+FUNCTION Card :
+    state boolean init(false)
+    clickHandler(
+        if (!state)
+            prop.increasePoint()
+            setState(TRUE)
+        else
+            prop.reset()
+    )
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    return JSX cardId=card1 card(prop.src,prop.title)  onClick = prop.clickHandler
+    
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+FUNCTION that render
+    the whole thing again with the card boolean reset to init state.
+    type of reset we can try
+    #1  take the obj that store card states and turn all to false or 
+    #   just have a saved version the obj that is all false
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    in random order with the previous changed state card  maintained
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    
