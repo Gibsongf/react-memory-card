@@ -56,7 +56,8 @@ FUNCTION AllCards that is the composition of the below functions?
         })
 
 FUNCTION Card :
-    state boolean init(false)
+    state boolean init(false) don't need we got it from props
+    
     clickHandler(
         if (!state)
             prop.increasePoint()
