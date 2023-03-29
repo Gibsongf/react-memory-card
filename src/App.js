@@ -28,19 +28,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <button onClick={increaseScore}>increase score</button>
-        <button onClick={isBestScore}>best score</button>
-        <button onClick={resetScore}>reset Score</button> */}
-
         <h1>Memory Card Game</h1>
         <Board currentPoint={currentScore} bestPoint={bestScore}/>
       </header>
-      <AllCard 
+      <div className='card-container'>
+        <AllCard 
         reset={resetScore}
         increasePoint={increaseScore}
-        
-        
         />
+      </div>
     </div>
   );
 }

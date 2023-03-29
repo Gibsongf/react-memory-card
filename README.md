@@ -2,11 +2,11 @@ planning:
 a theme for the card displayed = family guy
 Griffin = Peter, Lois, Stewie, Brian, Megatron, Chris
 Glenn Quagmire
-Billy Finn 
-Cleveland Brown
-Joe Swanson
-Seamus Levine
-Adam West
+"Billy Finn ",
+"Cleveland Brown",
+"Joe Swanson",
+"Seamus Levine",
+"Adam West"
 FUNCTION MAIN APP 
     bestScore setBestScore = useState (0)
     currentScore setCurrentScore = useState (0)
