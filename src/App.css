@@ -1,7 +1,24 @@
+@font-face {
+    font-family: "main-font";
+    src: url("/src/font/TakeLooks.woff") format("woff"),
+    url("/src/font/TakeLooks.woff2") format("woff2");;
+}
+
 *{
     margin: 0;
-    padding: 2px;
-
+    font-family: "main-font";
+    font-weight: 100;
+    color: white;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#root{
+    padding: 25px;
+    background-color: #001040;
 }
 
 img{
@@ -9,10 +26,14 @@ img{
     height: 250px;
     border-radius: 15px;
 }
+.card:hover {
+    box-shadow: 1px 1px 5px 5px #5878a0;
+}
 .card {
-    border: 5px solid black;
+    /* border: 5px solid black; */
     border-radius: 30px;
-
+    background-color: #083870;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;

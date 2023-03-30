@@ -27,10 +27,13 @@ function App() {
   }
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Memory Card Game</h1>
+      <div className="header">
+        <span>
+        <h1>Family Guy Memory Game</h1>
+        <h5>Get points by clicking on an image but don't click on any more than once!</h5>
+        </span>
         <Board currentPoint={currentScore} bestPoint={bestScore}/>
-      </header>
+      </div >
       <div className='card-container'>
         <AllCard 
         reset={resetScore}
