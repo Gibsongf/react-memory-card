@@ -39,6 +39,25 @@ const stateObj = (obj) => {
     key.forEach((i) => (newObj[obj[i].id] = false));
     return newObj;
 };
+const randomCard = (cards) => {
+	const randomNumber = (array) =>{
+        const indx =  Math.floor(Math.random() * array.length)
+        return indx
+    }
+	
+	let arr = []
+    const shuffle = (lst) =>{
+		const i = randomNumber(lst)
+		arr.push(lst[i])
+		lst.splice(i,1)
+		if(lst.length === 0) {
+			return 
+		}
+		shuffle(lst,arr)
+    }
+    shuffle(cards)
+	return arr
+}
 export const AllCard = (props) => {
 	const imgsInfo = allImg();
 	const obj = stateObj(imgsInfo);
@@ -68,21 +87,7 @@ export const AllCard = (props) => {
 			/>
 		);
 	});
-    const randomNumber = (array) =>{
-        const indx =  Math.floor(Math.random() * array.length)
-        return array[indx]
-    }
-    const shuffle = (arr=[]) =>{
-
-    }
-    const randomizeCards = shuffle()
-        // 
-        // random function that receive the length of multipleCards
-        // return random number (with the length as base )
-        // and the select will
-        // be pass to another array until theres none at multipleCards
-    console.log(multipleCards)
-	return multipleCards;
+	return randomCard(multipleCards)
 };
 
 const CreateCard = (props) => {
