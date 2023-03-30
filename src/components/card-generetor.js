@@ -87,14 +87,14 @@ export const AllCard = (props) => {
 			/>
 		);
 	});
-	return randomCard(multipleCards)
+	return multipleCards//randomCard(multipleCards)
 };
 
 const CreateCard = (props) => {
 	const { clickHandler, id, src, title } = props;
 	return (
 		<div className="card" >
-			<img onClick={clickHandler} src={src} alt="peter" id={id} />
+			<img onClick={clickHandler} src={src} alt={title} id={id} />
 			<h4>{title}</h4>
 		</div>
 	);
