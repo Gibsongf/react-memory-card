@@ -12,7 +12,8 @@
     color: white;
 
 }
-#pop-up{
+
+#pop-up {
     position: fixed;
     z-index: 1;
     padding-top: 50px;
@@ -20,8 +21,9 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
 #pop-up-content {
     background-color: #fefefe;
     margin: 5% auto;
@@ -36,9 +38,10 @@
     align-items: center;
 
 }
-#pop-up-content button{
+
+#pop-up-content button {
     color: black;
-}    
+}
 
 .header {
     display: flex;

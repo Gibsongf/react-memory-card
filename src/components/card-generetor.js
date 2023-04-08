@@ -34,30 +34,30 @@ const allImg = () => {
 	return imgSrc;
 };
 const stateObj = (obj) => {
-    let newObj = {};
-    const key = Object.keys(obj);
-    key.forEach((i) => (newObj[obj[i].id] = false));
-    return newObj;
+	let newObj = {};
+	const key = Object.keys(obj);
+	key.forEach((i) => (newObj[obj[i].id] = false));
+	return newObj;
 };
 const randomCard = (cards) => {
-	const randomNumber = (array) =>{
-        const indx =  Math.floor(Math.random() * array.length)
-        return indx
-    }
-	
-	let arr = []
-    const shuffle = (lst) =>{
-		const i = randomNumber(lst)
-		arr.push(lst[i])
-		lst.splice(i,1)
-		if(lst.length === 0) {
-			return 
+	const randomNumber = (array) => {
+		const indx = Math.floor(Math.random() * array.length);
+		return indx;
+	};
+
+	let arr = [];
+	const shuffle = (lst) => {
+		const i = randomNumber(lst);
+		arr.push(lst[i]);
+		lst.splice(i, 1);
+		if (lst.length === 0) {
+			return;
 		}
-		shuffle(lst,arr)
-    }
-    shuffle(cards)
-	return arr
-}
+		shuffle(lst, arr);
+	};
+	shuffle(cards);
+	return arr;
+};
 export const AllCard = (props) => {
 	const imgsInfo = allImg();
 	const obj = stateObj(imgsInfo);
@@ -87,13 +87,13 @@ export const AllCard = (props) => {
 			/>
 		);
 	});
-	return multipleCards//randomCard(multipleCards)
+	return randomCard(multipleCards);
 };
 
 const CreateCard = (props) => {
 	const { clickHandler, id, src, title } = props;
 	return (
-		<div className="card" >
+		<div className="card">
 			<img onClick={clickHandler} src={src} alt={title} id={id} />
 			<h4>{title}</h4>
 		</div>
