@@ -1,1 +1,2 @@
-from odin project curriculum a simple memory card game
+# A simple React Memory Card Game
+Part of the [Odin Project](https://www.theodinproject.com/) React curriculum <br>
