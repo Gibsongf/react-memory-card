@@ -1,44 +1,6 @@
 import { useState } from "react";
+import { initialStateObj, allImg } from "./utils";
 
-function getAllImgs(imgs_files, contentDescription) {
-    const folder_content = {};
-    contentDescription.sort();
-    const name_src = imgs_files.keys();
-    name_src.forEach(
-        (key) =>
-            (folder_content[key] = {
-                src: imgs_files(key),
-                name: contentDescription[name_src.indexOf(key)],
-                id: "card" + (name_src.indexOf(key) + 1),
-            })
-    );
-    return folder_content;
-}
-const allImg = () => {
-    const imgNames = [
-        "Peter Griffin",
-        "Stewie Griffin",
-        "Lois Griffin",
-        "Brian Griffin",
-        "Chris Griffin",
-        "Megatron Griffin",
-        "Glenn Quagmire",
-        "Billy Finn ",
-        "Cleveland Brown",
-        "Joe Swanson",
-        "Seamus Levine",
-        "Adam West",
-    ];
-    const path_search = require.context("../imgs/", false, /\.jp/);
-    const imgSrc = getAllImgs(path_search, imgNames);
-    return imgSrc;
-};
-const stateObj = (obj) => {
-    let newObj = {};
-    const key = Object.keys(obj);
-    key.forEach((i) => (newObj[obj[i].id] = false));
-    return newObj;
-};
 const randomCard = (cards) => {
     const randomNumber = (array) => {
         const indx = Math.floor(Math.random() * array.length);
@@ -60,7 +22,7 @@ const randomCard = (cards) => {
 };
 export const AllCard = (props) => {
     const imgsInfo = allImg();
-    const obj = stateObj(imgsInfo);
+    const obj = initialStateObj(imgsInfo);
     const [wasClick, setWasClick] = useState(obj);
 
     const cardClicked = (e) => {
