@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b7532a2.css",
+    "main.js": "/static/js/main.4a68a99a.js",
+    "static/media/Seamus.jpg": "/static/media/Seamus.03b7b922e599431d13fd.jpg",
+    "static/media/Billy.jpg": "/static/media/Billy.cb71cb566f472534c54d.jpg",
+    "static/media/Glenn.jpg": "/static/media/Glenn.e48d8b2ffb967adc63b5.jpg",
+    "static/media/Chris.jpg": "/static/media/Chris.2654b6863944ecefdd26.jpg",
+    "static/media/Cleveland.jpeg": "/static/media/Cleveland.3812a7771ca613bd0b61.jpeg",
+    "static/media/Peter.jpeg": "/static/media/Peter.b27ac32a947ef99f40bb.jpeg",
+    "static/media/Meg.jpg": "/static/media/Meg.f653b6e69dc11cda8678.jpg",
+    "static/media/Adam.jpg": "/static/media/Adam.ac42464ee6bc732e2885.jpg",
+    "static/media/Brian.jpg": "/static/media/Brian.46198d56cc77def4dc30.jpg",
+    "static/media/Joe.jpeg": "/static/media/Joe.8225aa53b4257a8b12a6.jpeg",
+    "static/media/Stewie.jpg": "/static/media/Stewie.a0e20b945a3068ff1bf9.jpg",
+    "static/media/TakeLooks.woff": "/static/media/TakeLooks.7dd863864a2e231e5f59.woff",
+    "static/media/TakeLooks.woff2": "/static/media/TakeLooks.abea3a1c4920b2559116.woff2",
+    "static/media/Lois.jpeg": "/static/media/Lois.d102d03ec2d28cca2436.jpeg",
+    "index.html": "/index.html",
+    "main.4b7532a2.css.map": "/static/css/main.4b7532a2.css.map",
+    "main.4a68a99a.js.map": "/static/js/main.4a68a99a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b7532a2.css",
+    "static/js/main.4a68a99a.js"
+  ]
+}
